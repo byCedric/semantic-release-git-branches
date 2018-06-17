@@ -2,6 +2,7 @@
 # The MIT License (MIT)
 
 Copyright (c) 2017 Pierre-Denis Vanduynslager (Pre-fork code)
+
 Copyright (c) 2018 Cedric van Putten <me@bycedric.com> (Post-fork code)
 
 > Permission is hereby granted, free of charge, to any person obtaining a copy
