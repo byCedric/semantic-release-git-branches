@@ -1,3 +1,34 @@
+# [1.2.0](https://github.com/bycedric/semantic-release-git-branches/compare/1.1.0...1.2.0) (2018-07-10)
+
+
+### Bug fixes
+
+* pin sinon to 6.0.0 ([e5521ba](https://github.com/bycedric/semantic-release-git-branches/commit/e5521ba))
+
+
+### Code refactors
+
+* upgrade semantic-release to version 15.6.3 ([#7](https://github.com/bycedric/semantic-release-git-branches/issues/7)) ([585122d](https://github.com/bycedric/semantic-release-git-branches/commit/585122d))
+
+
+### New features
+
+* integrate commit standards ([900fe16](https://github.com/bycedric/semantic-release-git-branches/commit/900fe16))
+
+
+### Other chores
+
+* configure custom greenkeeper commit messages ([e413fc7](https://github.com/bycedric/semantic-release-git-branches/commit/e413fc7))
+* generate a new changelog from start ([7e1e86f](https://github.com/bycedric/semantic-release-git-branches/commit/7e1e86f))
+* unpin sinon and use 6.1.3 ([#10](https://github.com/bycedric/semantic-release-git-branches/issues/10)) ([77da03d](https://github.com/bycedric/semantic-release-git-branches/commit/77da03d))
+* update semantic-release to version 15.7.0 ([#9](https://github.com/bycedric/semantic-release-git-branches/issues/9)) ([f1983e2](https://github.com/bycedric/semantic-release-git-branches/commit/f1983e2))
+
+
+### Pipeline changes
+
+* fix analyze commits settings for semantic release ([c61daee](https://github.com/bycedric/semantic-release-git-branches/commit/c61daee))
+* run tests in serial to avoid unexpected git errors ([#8](https://github.com/bycedric/semantic-release-git-branches/issues/8)) ([9783b25](https://github.com/bycedric/semantic-release-git-branches/commit/9783b25))
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/bycedric/semantic-release-git-branches/compare/1.0.0...1.1.0) (2018-06-18)
 
@@ -74,6 +105,3 @@ The plugin is compatible only with `semantic-release@13.0.0` and above.
 * The `changelog` options has been removed. The `CHANGELOG.md` is not created or updated anymore.
 Use https://github.com/semantic-release/changelog to create/update the `CHANGELOG.md`.
 By default if a `CHANGELOG.md` file exists and has been modified it will be included in the release commit.
-
-
-
