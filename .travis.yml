@@ -11,6 +11,7 @@ before_install:
 install:
   - npm install
 script:
+  - commitlint-travis
   - npm run test -- --serial
 after_success:
   - npm run codecov
