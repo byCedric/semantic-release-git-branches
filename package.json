@@ -18,10 +18,17 @@
 		"p-reduce": "^1.0.0"
 	},
 	"devDependencies": {
+		"@commitlint/cli": "^7.0.0",
+		"@commitlint/travis-cli": "^7.0.0",
 		"@semantic-release/changelog": "^2.0.2",
 		"ava": "^0.25.0",
 		"clear-module": "^2.1.0",
 		"codecov": "^3.0.0",
+		"commit-types-peakfijn": "^0.4.0",
+		"commitizen": "^2.10.1",
+		"commitlint-config-peakfijn": "^0.4.0",
+		"conventional-changelog-peakfijn": "^0.4.0",
+		"cz-changelog-peakfijn": "^0.4.0",
 		"file-url": "^2.0.2",
 		"get-stream": "^3.0.0",
 		"git-log-parser": "^1.2.0",
@@ -76,6 +83,11 @@
 	},
 	"xo": {
 		"prettier": true
+	},
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-changelog-peakfijn"
+		}
 	},
 	"greenkeeper": {
 		"commitMessages": {
