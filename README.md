@@ -1,7 +1,7 @@
 # Git Branches - Semantic Release
 
 [![Latest Release](https://img.shields.io/github/release/byCedric/semantic-release-git-branches/all.svg?style=flat-square)](https://github.com/byCedric/semantic-release-git-branches/releases)
-[![Build Status](https://img.shields.io/travis/byCedric/semantic-release-git-branches/master.svg?style=flat-square)](https://travis-ci.com/byCedric/semantic-release-git-branches)
+[![Build Status](https://img.shields.io/travis/com/byCedric/semantic-release-git-branches/master.svg?style=flat-square)](https://travis-ci.com/byCedric/semantic-release-git-branches)
 [![Codecov coverage](https://img.shields.io/codecov/c/github/byCedric/semantic-release-git-branches.svg?style=flat-square)](https://codecov.io/gh/byCedric/semantic-release-git-branches)
 [![Code Climate grade](https://img.shields.io/codeclimate/maintainability/byCedric/semantic-release-git-branches.svg?style=flat-square)](https://codeclimate.com/github/byCedric/semantic-release-git-branches)
 
