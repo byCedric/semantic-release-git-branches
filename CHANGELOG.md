@@ -1,3 +1,16 @@
+## [1.2.1](https://github.com/bycedric/semantic-release-git-branches/compare/1.2.0...1.2.1) (2018-08-04)
+
+
+### Code refactors
+
+* upgrade [@semantic-release](https://github.com/semantic-release)/changelog to version 3.0.0 ([#14](https://github.com/bycedric/semantic-release-git-branches/issues/14)) ([75f9b9e](https://github.com/bycedric/semantic-release-git-branches/commit/75f9b9e))
+* upgrade clear-module to version 3.0.0 ([61d43b3](https://github.com/bycedric/semantic-release-git-branches/commit/61d43b3))
+* upgrade commit-types-peakfijn to version 0.5.0 ([#15](https://github.com/bycedric/semantic-release-git-branches/issues/15)) ([1aa6a1e](https://github.com/bycedric/semantic-release-git-branches/commit/1aa6a1e))
+* upgrade conventional-changelog-peakfijn to version 0.5.0 ([#16](https://github.com/bycedric/semantic-release-git-branches/issues/16)) ([1ce1c86](https://github.com/bycedric/semantic-release-git-branches/commit/1ce1c86))
+* upgrade cz-changelog-peakfijn to version 0.5.0 ([#17](https://github.com/bycedric/semantic-release-git-branches/issues/17)) ([0ef8947](https://github.com/bycedric/semantic-release-git-branches/commit/0ef8947))
+* upgrade fs-extra to version 7.0.0 ([#13](https://github.com/bycedric/semantic-release-git-branches/issues/13)) ([e899bfd](https://github.com/bycedric/semantic-release-git-branches/commit/e899bfd))
+* use release commit type for automated releases ([261da5c](https://github.com/bycedric/semantic-release-git-branches/commit/261da5c))
+
 # [1.2.0](https://github.com/bycedric/semantic-release-git-branches/compare/1.1.0...1.2.0) (2018-07-10)
 
 
