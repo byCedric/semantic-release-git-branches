@@ -27,7 +27,7 @@
 		"commit-types-peakfijn": "^0.6.0",
 		"commitizen": "^2.10.1",
 		"commitlint-config-peakfijn": "^0.4.0",
-		"conventional-changelog-peakfijn": "^0.5.0",
+		"conventional-changelog-peakfijn": "^0.6.0",
 		"cz-changelog-peakfijn": "^0.6.0",
 		"file-url": "^2.0.2",
 		"get-stream": "^4.0.0",
