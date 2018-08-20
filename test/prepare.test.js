@@ -5,7 +5,7 @@ import prepare from '../lib/prepare';
 import {gitRepo, gitGetCommits, gitCommitedFiles} from './helpers/git-utils';
 
 // Save the current process.env
-const envBackup = { ...process.env };
+const envBackup = {...process.env};
 
 test.beforeEach(async t => {
 	// Delete env variables in case they are on the machine running the tests
