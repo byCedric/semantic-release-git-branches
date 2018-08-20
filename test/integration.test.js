@@ -14,7 +14,7 @@ import {
 } from './helpers/git-utils';
 
 // Save the current process.env
-const envBackup = Object.assign({}, process.env);
+const envBackup = {...process.env};
 // Save the current working diretory
 const cwd = process.cwd();
 
