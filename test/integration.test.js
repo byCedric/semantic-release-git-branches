@@ -130,12 +130,9 @@ test('Throw SemanticReleaseError if config is invalid', async t => {
 	const message = 42;
 	const assets = true;
 
-	const verify = await t.throwsAsync(() => (
-		t.context.m.verifyConditions(
-			{message, assets},
-			{options: {}, logger: t.context.logger}
-		)
-	));
+	const verify = await t.throwsAsync(() =>
+		t.context.m.verifyConditions({message, assets}, {options: {}, logger: t.context.logger})
+	);
 
 	const errors = [...verify];
 
