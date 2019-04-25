@@ -122,9 +122,9 @@ test('Throw SemanticReleaseError if "message" option is a whitespace String', as
 });
 
 test('Throw SemanticReleaseError if unknown branches are provided to merge with', async t => {
-	const [error] = await t.throwsAsync(() => (
+	const [error] = await t.throwsAsync(() =>
 		verify({branchMerges: ['abc']}, {options: t.context.options}, t.context.logger)
-	));
+	);
 
 	t.is(error.name, 'SemanticReleaseError');
 	t.is(error.code, 'EINVALIDMERGEBRANCH');
