@@ -25,9 +25,7 @@
 	],
 	"main": "index.js",
 	"scripts": {
-		"codecov": "codecov -f coverage/coverage-final.json",
 		"lint": "xo",
-		"pretest": "npm run lint",
 		"test": "nyc ava -v"
 	},
 	"dependencies": {
