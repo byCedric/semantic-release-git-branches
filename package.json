@@ -1,7 +1,7 @@
 {
 	"name": "semantic-release-git-branches",
 	"description": "A fork of @semantic-release/git that uses a more gitflow approach for releases",
-	"version": "1.2.1",
+	"version": "1.2.2",
 	"keywords": [
 		"semantic",
 		"release",

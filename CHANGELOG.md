@@ -1,3 +1,59 @@
+## [1.2.2](https://github.com/bycedric/semantic-release-git-branches/compare/1.2.1...1.2.2) (2019-04-25)
+
+
+### Code refactors
+
+* clean up excessive or replaced dependencies ([7719ec3](https://github.com/bycedric/semantic-release-git-branches/commit/7719ec3))
+* replace old release configuration with new version ([29ea01a](https://github.com/bycedric/semantic-release-git-branches/commit/29ea01a))
+* replace url parse and format with simple split ([46c1cac](https://github.com/bycedric/semantic-release-git-branches/commit/46c1cac))
+* restructure the package file ([0ba5f05](https://github.com/bycedric/semantic-release-git-branches/commit/0ba5f05))
+* separate linting and testing and simplify codecov ([fdd12ae](https://github.com/bycedric/semantic-release-git-branches/commit/fdd12ae))
+* upgrade all dependencies to their latest versions ([e16177c](https://github.com/bycedric/semantic-release-git-branches/commit/e16177c))
+* upgrade commit-types-peakfijn to version 0.6.0 ([#20](https://github.com/bycedric/semantic-release-git-branches/issues/20)) ([919fb5a](https://github.com/bycedric/semantic-release-git-branches/commit/919fb5a))
+* upgrade commit-types-peakfijn to version 0.8.0 ([#28](https://github.com/bycedric/semantic-release-git-branches/issues/28)) ([7a39db2](https://github.com/bycedric/semantic-release-git-branches/commit/7a39db2))
+* upgrade commitizen to version 3.0.2 ([#31](https://github.com/bycedric/semantic-release-git-branches/issues/31)) ([e41b646](https://github.com/bycedric/semantic-release-git-branches/commit/e41b646))
+* upgrade conventional-changelog-peakfijn to version 0.6.0 ([#21](https://github.com/bycedric/semantic-release-git-branches/issues/21)) ([d3f4335](https://github.com/bycedric/semantic-release-git-branches/commit/d3f4335))
+* upgrade conventional-changelog-peakfijn to version 0.7.0 ([#29](https://github.com/bycedric/semantic-release-git-branches/issues/29)) ([682a575](https://github.com/bycedric/semantic-release-git-branches/commit/682a575))
+* upgrade cz-changelog-peakfijn to version 0.6.0 ([#22](https://github.com/bycedric/semantic-release-git-branches/issues/22)) ([2628fdb](https://github.com/bycedric/semantic-release-git-branches/commit/2628fdb))
+* upgrade cz-changelog-peakfijn to version 0.8.0 ([#30](https://github.com/bycedric/semantic-release-git-branches/issues/30)) ([e839a80](https://github.com/bycedric/semantic-release-git-branches/commit/e839a80))
+* upgrade debug to version 4.0.0 ([#27](https://github.com/bycedric/semantic-release-git-branches/issues/27)) ([d6127b0](https://github.com/bycedric/semantic-release-git-branches/commit/d6127b0))
+* upgrade execa to version 0.11.0 ([#23](https://github.com/bycedric/semantic-release-git-branches/issues/23)) ([79ed060](https://github.com/bycedric/semantic-release-git-branches/commit/79ed060))
+* upgrade execa to version 1.0.0 ([#24](https://github.com/bycedric/semantic-release-git-branches/issues/24)) ([51bfb73](https://github.com/bycedric/semantic-release-git-branches/commit/51bfb73))
+* upgrade get-stream to version 4.0.0 ([#19](https://github.com/bycedric/semantic-release-git-branches/issues/19)) ([ef2fa56](https://github.com/bycedric/semantic-release-git-branches/commit/ef2fa56))
+* upgrade xo to version 0.22.0 ([#18](https://github.com/bycedric/semantic-release-git-branches/issues/18)) ([1d1cb64](https://github.com/bycedric/semantic-release-git-branches/commit/1d1cb64))
+* upgrade xo to version 0.23.0 ([#25](https://github.com/bycedric/semantic-release-git-branches/issues/25)) ([fb9421b](https://github.com/bycedric/semantic-release-git-branches/commit/fb9421b))
+* use new peakfijn commitizen package ([5b86613](https://github.com/bycedric/semantic-release-git-branches/commit/5b86613))
+* use new peakfijn commitlint package ([75047e4](https://github.com/bycedric/semantic-release-git-branches/commit/75047e4))
+* use new peakfijn semantic release package ([3d458e1](https://github.com/bycedric/semantic-release-git-branches/commit/3d458e1))
+
+
+### Code style changes
+
+* fix all new styling issues ([9c4ca04](https://github.com/bycedric/semantic-release-git-branches/commit/9c4ca04))
+* fix latest styling issues caused by the ava refactor ([fe9600b](https://github.com/bycedric/semantic-release-git-branches/commit/fe9600b))
+
+
+### Documentation changes
+
+* use new travis badge that works ([96be688](https://github.com/bycedric/semantic-release-git-branches/commit/96be688)), closes [badges/shields#1711](https://github.com/badges/shields/issues/1711)
+
+
+### Other chores
+
+* configure proper pull request titles for greenkeeper ([93416af](https://github.com/bycedric/semantic-release-git-branches/commit/93416af))
+* simplify the issue and pull request templates ([#26](https://github.com/bycedric/semantic-release-git-branches/issues/26)) ([dd17cde](https://github.com/bycedric/semantic-release-git-branches/commit/dd17cde))
+
+
+### Pipeline changes
+
+* dryrun a release on develop as test before release ([8f05142](https://github.com/bycedric/semantic-release-git-branches/commit/8f05142))
+* use lts node versions and switch to npm ci with audit ([a5cec66](https://github.com/bycedric/semantic-release-git-branches/commit/a5cec66))
+
+
+### Testing updates
+
+* update ava async usage to latest release ([4df0c72](https://github.com/bycedric/semantic-release-git-branches/commit/4df0c72))
+
 ## [1.2.1](https://github.com/bycedric/semantic-release-git-branches/compare/1.2.0...1.2.1) (2018-08-04)
 
 
