@@ -18,8 +18,8 @@
 		"p-reduce": "^1.0.0"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "^7.0.0",
 		"@commitlint/travis-cli": "^7.0.0",
+		"@peakfijn/config-commitlint": "^1.0.0",
 		"@semantic-release/changelog": "^3.0.0",
 		"ava": "^0.25.0",
 		"clear-module": "^3.0.0",
@@ -87,6 +87,23 @@
 	"config": {
 		"commitizen": {
 			"path": "./node_modules/cz-changelog-peakfijn"
+		}
+	},
+	"commitlint": {
+		"extends": [
+			"@peakfijn/config-commitlint"
+		],
+		"rules": {
+			"scope-empty": [
+				0
+			],
+			"scope-enum": [
+				2,
+				"always",
+				[
+					"package"
+				]
+			]
 		}
 	},
 	"greenkeeper": {
