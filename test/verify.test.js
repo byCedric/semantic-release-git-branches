@@ -34,7 +34,7 @@ test.afterEach.always(() => {
 
 test('Throw SemanticReleaseError if "assets" option is not a String or false or an Array of Objects', async t => {
 	const assets = true;
-	const [error] = await t.throws(verify({assets}, {options: t.context.options}, t.context.logger));
+	const [error] = await t.throwsAsync(() => verify({assets}, {options: t.context.options}, t.context.logger));
 
 	t.is(error.name, 'SemanticReleaseError');
 	t.is(error.code, 'EINVALIDASSETS');
@@ -42,7 +42,7 @@ test('Throw SemanticReleaseError if "assets" option is not a String or false or 
 
 test('Throw SemanticReleaseError if "assets" option is not an Array with invalid elements', async t => {
 	const assets = ['file.js', 42];
-	const [error] = await t.throws(verify({assets}, {options: t.context.options}, t.context.logger));
+	const [error] = await t.throwsAsync(() => verify({assets}, {options: t.context.options}, t.context.logger));
 
 	t.is(error.name, 'SemanticReleaseError');
 	t.is(error.code, 'EINVALIDASSETS');
@@ -52,54 +52,54 @@ test.serial('Verify "assets" is a String', async t => {
 	await gitCommits(['Test commit']);
 	const assets = 'file2.js';
 
-	await t.notThrows(verify({assets}, {options: t.context.options}, t.context.logger));
+	await t.notThrowsAsync(() => verify({assets}, {options: t.context.options}, t.context.logger));
 });
 
 test.serial('Verify "assets" is an Array of String', async t => {
 	await gitCommits(['Test commit']);
 	const assets = ['file1.js', 'file2.js'];
 
-	await t.notThrows(verify({assets}, {options: t.context.options}, t.context.logger));
+	await t.notThrowsAsync(() => verify({assets}, {options: t.context.options}, t.context.logger));
 });
 
 test.serial('Verify "assets" is an Object with a path property', async t => {
 	await gitCommits(['Test commit']);
 	const assets = {path: 'file2.js'};
 
-	await t.notThrows(verify({assets}, {options: t.context.options}, t.context.logger));
+	await t.notThrowsAsync(() => verify({assets}, {options: t.context.options}, t.context.logger));
 });
 
 test.serial('Verify "assets" is an Array of Object with a path property', async t => {
 	await gitCommits(['Test commit']);
 	const assets = [{path: 'file1.js'}, {path: 'file2.js'}];
 
-	await t.notThrows(verify({assets}, {options: t.context.options}, t.context.logger));
+	await t.notThrowsAsync(() => verify({assets}, {options: t.context.options}, t.context.logger));
 });
 
 test.serial('Verify disabled "assets" (set to false)', async t => {
 	await gitCommits(['Test commit']);
 	const assets = false;
 
-	await t.notThrows(verify({assets}, {options: t.context.options}, t.context.logger));
+	await t.notThrowsAsync(() => verify({assets}, {options: t.context.options}, t.context.logger));
 });
 
 test.serial('Verify "assets" is an Array of glob Arrays', async t => {
 	await gitCommits(['Test commit']);
 	const assets = [['dist/**', '!**/*.js'], 'file2.js'];
 
-	await t.notThrows(verify({assets}, {options: t.context.options}, t.context.logger));
+	await t.notThrowsAsync(() => verify({assets}, {options: t.context.options}, t.context.logger));
 });
 
 test.serial('Verify "assets" is an Array of Object with a glob Arrays in path property', async t => {
 	await gitCommits(['Test commit']);
 	const assets = [{path: ['dist/**', '!**/*.js']}, {path: 'file2.js'}];
 
-	await t.notThrows(verify({assets}, {options: t.context.options}, t.context.logger));
+	await t.notThrowsAsync(() => verify({assets}, {options: t.context.options}, t.context.logger));
 });
 
 test('Throw SemanticReleaseError if "message" option is not a String', async t => {
 	const message = 42;
-	const [error] = await t.throws(verify({message}, {options: t.context.options}, t.context.logger));
+	const [error] = await t.throwsAsync(() => verify({message}, {options: t.context.options}, t.context.logger));
 
 	t.is(error.name, 'SemanticReleaseError');
 	t.is(error.code, 'EINVALIDMESSAGE');
@@ -107,7 +107,7 @@ test('Throw SemanticReleaseError if "message" option is not a String', async t =
 
 test('Throw SemanticReleaseError if "message" option is an empty String', async t => {
 	const message = ' ';
-	const [error] = await t.throws(verify({message}, {options: t.context.options}, t.context.logger));
+	const [error] = await t.throwsAsync(() => verify({message}, {options: t.context.options}, t.context.logger));
 
 	t.is(error.name, 'SemanticReleaseError');
 	t.is(error.code, 'EINVALIDMESSAGE');
@@ -115,14 +115,16 @@ test('Throw SemanticReleaseError if "message" option is an empty String', async 
 
 test('Throw SemanticReleaseError if "message" option is a whitespace String', async t => {
 	const message = '  \n \r ';
-	const [error] = await t.throws(verify({message}, {options: t.context.options}, t.context.logger));
+	const [error] = await t.throwsAsync(() => verify({message}, {options: t.context.options}, t.context.logger));
 
 	t.is(error.name, 'SemanticReleaseError');
 	t.is(error.code, 'EINVALIDMESSAGE');
 });
 
 test('Throw SemanticReleaseError if unknown branches are provided to merge with', async t => {
-	const [error] = await t.throws(verify({branchMerges: ['abc']}, {options: t.context.options}, t.context.logger));
+	const [error] = await t.throwsAsync(() => (
+		verify({branchMerges: ['abc']}, {options: t.context.options}, t.context.logger)
+	));
 
 	t.is(error.name, 'SemanticReleaseError');
 	t.is(error.code, 'EINVALIDMERGEBRANCH');
@@ -131,5 +133,5 @@ test('Throw SemanticReleaseError if unknown branches are provided to merge with'
 test.serial('Verify undefined "message" and "assets"', async t => {
 	await gitCommits(['Test commit']);
 
-	await t.notThrows(verify({}, {options: t.context.options}, t.context.logger));
+	await t.notThrowsAsync(() => verify({}, {options: t.context.options}, t.context.logger));
 });

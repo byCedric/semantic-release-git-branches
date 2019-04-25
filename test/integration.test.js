@@ -108,7 +108,7 @@ test.serial('Verify authentication only on the fist call', async t => {
 	const nextRelease = {version: '2.0.0', gitTag: 'v2.0.0'};
 	const options = {repositoryUrl, branch, prepare: ['@semantic-release/npm']};
 
-	await t.notThrows(t.context.m.verifyConditions({}, {options, logger: t.context.logger}));
+	await t.notThrowsAsync(() => t.context.m.verifyConditions({}, {options, logger: t.context.logger}));
 	await t.context.m.prepare({}, {logger: t.context.logger, options: {repositoryUrl, branch}, nextRelease});
 });
 
@@ -117,7 +117,8 @@ test('Throw SemanticReleaseError if prepare config is invalid', async t => {
 	const assets = true;
 	const options = {prepare: ['@semantic-release/npm', {path: 'semantic-release-git-branches', message, assets}]};
 
-	const errors = [...(await t.throws(t.context.m.verifyConditions({}, {options, logger: t.context.logger})))];
+	const verify = await t.throwsAsync(() => t.context.m.verifyConditions({}, {options, logger: t.context.logger}));
+	const errors = [...verify];
 
 	t.is(errors[0].name, 'SemanticReleaseError');
 	t.is(errors[0].code, 'EINVALIDASSETS');
@@ -129,9 +130,14 @@ test('Throw SemanticReleaseError if config is invalid', async t => {
 	const message = 42;
 	const assets = true;
 
-	const errors = [
-		...(await t.throws(t.context.m.verifyConditions({message, assets}, {options: {}, logger: t.context.logger}))),
-	];
+	const verify = await t.throwsAsync(() => (
+		t.context.m.verifyConditions(
+			{message, assets},
+			{options: {}, logger: t.context.logger}
+		)
+	));
+
+	const errors = [...verify];
 
 	t.is(errors[0].name, 'SemanticReleaseError');
 	t.is(errors[0].code, 'EINVALIDASSETS');

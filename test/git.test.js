@@ -40,14 +40,14 @@ test.serial('Get the modified files, ignoring files in .gitignore but including 
 	// Add untracked file
 	await outputFile('file4.js', 'Test content');
 
-	await t.deepEqual(await getModifiedFiles(), ['file4.js', 'dir/file2.js', 'file1.js']);
+	t.deepEqual(await getModifiedFiles(), ['file4.js', 'dir/file2.js', 'file1.js']);
 });
 
 test.serial('Returns [] if there is no modified files', async t => {
 	// Create a git repository, set the current working directory at the root of the repo
 	await gitRepo();
 
-	await t.deepEqual(await getModifiedFiles(), []);
+	t.deepEqual(await getModifiedFiles(), []);
 });
 
 test.serial('Commit added files', async t => {
@@ -59,7 +59,7 @@ test.serial('Commit added files', async t => {
 	await add(['.']);
 	await commit('Test commit');
 
-	await t.true((await gitGetCommits()).length === 1);
+	t.true((await gitGetCommits()).length === 1);
 });
 
 test.serial('Get the last commit sha', async t => {
@@ -77,7 +77,7 @@ test.serial('Throw error if the last commit sha cannot be found', async t => {
 	// Create a git repository, set the current working directory at the root of the repo
 	await gitRepo();
 
-	await t.throws(gitHead());
+	await t.throwsAsync(() => gitHead());
 });
 
 test.serial('Push commit to remote repository', async t => {
