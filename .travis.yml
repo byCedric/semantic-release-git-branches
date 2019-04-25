@@ -1,17 +1,19 @@
 ---
 language: node_js
 node_js:
-  - node
-  - lts/*
+  - 12
+  - 10
+  - 8
 cache:
   directories:
-    - $HOME/.npm
+    - ~/.npm
 before_install:
   - npm install -g npm@latest
 install:
-  - npm install
+  - npm audit || echo 'Make it unblocking awaiting tar/node-gyp fix'
+  - npm ci
 script:
-  - commitlint-travis
+  - npx commitlint-travis
   - npm run test -- --serial
 after_success:
   - npm run codecov
