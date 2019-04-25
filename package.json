@@ -19,6 +19,7 @@
 	},
 	"devDependencies": {
 		"@commitlint/travis-cli": "^7.0.0",
+		"@peakfijn/config-commitizen": "^1.0.0",
 		"@peakfijn/config-commitlint": "^1.0.0",
 		"@semantic-release/changelog": "^3.0.0",
 		"ava": "^0.25.0",
@@ -86,7 +87,7 @@
 	},
 	"config": {
 		"commitizen": {
-			"path": "./node_modules/cz-changelog-peakfijn"
+			"path": "@peakfijn/config-commitizen"
 		}
 	},
 	"commitlint": {
