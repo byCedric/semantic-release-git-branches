@@ -117,7 +117,39 @@
 		"trailingComma": "es5"
 	},
 	"release": {
-		"extends": "@peakfijn/config-release"
+		"extends": "@peakfijn/config-release",
+		"plugins": null,
+		"analyzeCommits": {
+			"preset": "peakfijn",
+			"releaseRules": "release-rules-peakfijn"
+		},
+		"generateNotes": [
+			{
+				"path": "@semantic-release/release-notes-generator",
+				"preset": "peakfijn"
+			}
+		],
+		"verifyConditions": [
+			"@semantic-release/changelog",
+			"@semantic-release/npm",
+			"./lib/verify",
+			"@semantic-release/github"
+		],
+		"prepare": [
+			"@semantic-release/changelog",
+			"@semantic-release/npm",
+			{
+				"path": "./lib/prepare",
+				"message": "release: create new version ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
+				"branchMerges": [
+					"develop",
+					"master"
+				]
+			}
+		],
+		"publish": "@semantic-release/github",
+		"success": "@semantic-release/github",
+		"fail": "@semantic-release/github"
 	},
 	"xo": {
 		"prettier": true
