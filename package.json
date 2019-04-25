@@ -2,9 +2,33 @@
 	"name": "semantic-release-git-branches",
 	"description": "A fork of @semantic-release/git that uses a more gitflow approach for releases",
 	"version": "1.2.1",
+	"keywords": [
+		"semantic",
+		"release",
+		"git",
+		"flow",
+		"bycedric"
+	],
 	"author": "Cedric van Putten <me@bycedric.com>",
+	"license": "MIT",
+	"homepage": "https://github.com/bycedric/semantic-release-git-branches#readme",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/bycedric/semantic-release-git-branches.git"
+	},
 	"bugs": {
 		"url": "https://github.com/bycedric/semantic-release-git-branches/issues"
+	},
+	"files": [
+		"lib",
+		"index.js"
+	],
+	"main": "index.js",
+	"scripts": {
+		"codecov": "codecov -f coverage/coverage-final.json",
+		"lint": "xo",
+		"pretest": "npm run lint",
+		"test": "nyc ava -v"
 	},
 	"dependencies": {
 		"@semantic-release/error": "^2.1.0",
@@ -43,49 +67,6 @@
 	"engines": {
 		"node": ">=8.3"
 	},
-	"files": [
-		"lib",
-		"index.js"
-	],
-	"homepage": "https://github.com/bycedric/semantic-release-git-branches#readme",
-	"keywords": [
-		"semantic",
-		"release",
-		"git",
-		"flow",
-		"bycedric"
-	],
-	"license": "MIT",
-	"main": "index.js",
-	"nyc": {
-		"include": [
-			"lib/**/*.js",
-			"index.js"
-		],
-		"reporter": [
-			"json",
-			"text",
-			"html"
-		],
-		"all": true
-	},
-	"prettier": {
-		"printWidth": 120,
-		"trailingComma": "es5"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/bycedric/semantic-release-git-branches.git"
-	},
-	"scripts": {
-		"codecov": "codecov -f coverage/coverage-final.json",
-		"lint": "xo",
-		"pretest": "npm run lint",
-		"test": "nyc ava -v"
-	},
-	"xo": {
-		"prettier": true
-	},
 	"config": {
 		"commitizen": {
 			"path": "@peakfijn/config-commitizen"
@@ -108,9 +89,6 @@
 			]
 		}
 	},
-	"release": {
-		"extends": "@peakfijn/config-release"
-	},
 	"greenkeeper": {
 		"commitMessages": {
 			"initialBadge": "documentation: add greenkeeper badge",
@@ -129,5 +107,27 @@
 			"basicPR": "refactor: upgrade ${dependency} to version ${version}",
 			"groupPR": "refactor(${group}): upgrade ${dependency} to version ${version}"
 		}
+	},
+	"nyc": {
+		"include": [
+			"lib/**/*.js",
+			"index.js"
+		],
+		"reporter": [
+			"json",
+			"text",
+			"html"
+		],
+		"all": true
+	},
+	"prettier": {
+		"printWidth": 120,
+		"trailingComma": "es5"
+	},
+	"release": {
+		"extends": "@peakfijn/config-release"
+	},
+	"xo": {
+		"prettier": true
 	}
 }
