@@ -26,6 +26,7 @@ export async function gitRepo(withRemote, branch = 'master') {
 	} else {
 		await gitCheckout(branch);
 	}
+
 	return fileUrl(dir);
 }
 

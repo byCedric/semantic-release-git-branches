@@ -6,6 +6,7 @@ let verified;
 
 async function verifyConditions(pluginConfig, context) {
 	const {options} = context;
+
 	// If the Git prepare plugin is used and has `assets` or `message` configured, validate them now in order to prevent any release if the configuration is wrong
 	if (options.prepare) {
 		const preparePlugin =
@@ -15,6 +16,7 @@ async function verifyConditions(pluginConfig, context) {
 			pluginConfig[configKey] = defaultTo(pluginConfig[configKey], preparePlugin[configKey]);
 		});
 	}
+
 	await verifyGit(pluginConfig, context);
 	verified = true;
 }
@@ -24,6 +26,7 @@ async function prepare(pluginConfig, context) {
 		await verifyGit(pluginConfig, context);
 		verified = true;
 	}
+
 	await prepareGit(pluginConfig, context);
 }
 
