@@ -45,7 +45,7 @@
 		"@peakfijn/config-commitlint": "^1.0.0",
 		"@peakfijn/config-release": "^1.0.0",
 		"ava": "^1.4.1",
-		"clear-module": "^3.2.0",
+		"clear-module": "^4.0.0",
 		"codecov": "^3.3.0",
 		"file-url": "^3.0.0",
 		"get-stream": "^5.1.0",
