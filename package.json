@@ -41,7 +41,7 @@
 	},
 	"devDependencies": {
 		"@commitlint/travis-cli": "^7.5.2",
-		"@peakfijn/config-commitizen": "^1.0.0",
+		"@peakfijn/config-commitizen": "^2.1.0",
 		"@peakfijn/config-commitlint": "^1.0.0",
 		"@peakfijn/config-release": "^1.0.0",
 		"ava": "^1.4.1",
