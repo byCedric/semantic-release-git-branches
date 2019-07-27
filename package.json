@@ -26,7 +26,7 @@
 	"main": "index.js",
 	"scripts": {
 		"lint": "xo",
-		"test": "nyc ava -v"
+		"test": "nyc ava --verbose"
 	},
 	"dependencies": {
 		"@semantic-release/error": "^2.2.0",
