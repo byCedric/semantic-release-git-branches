@@ -1,7 +1,7 @@
 import test from 'ava';
 import {stub} from 'sinon';
 import verify from '../lib/verify';
-import {gitRepo, gitCommits} from './helpers/git-utils';
+import {gitRepo, gitCommits} from './helpers/_git-utils';
 
 // Save the current process.env
 const envBackup = {...process.env};

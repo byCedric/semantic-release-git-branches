@@ -2,7 +2,7 @@ import test from 'ava';
 import {outputFile} from 'fs-extra';
 import {stub} from 'sinon';
 import prepare from '../lib/prepare';
-import {gitRepo, gitGetCommits, gitCommitedFiles} from './helpers/git-utils';
+import {gitRepo, gitGetCommits, gitCommitedFiles} from './helpers/_git-utils';
 
 // Save the current process.env
 const envBackup = {...process.env};

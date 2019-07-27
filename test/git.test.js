@@ -1,7 +1,7 @@
 import test from 'ava';
 import {outputFile, appendFile} from 'fs-extra';
 import {add, getModifiedFiles, commit, gitHead, push} from '../lib/git';
-import {gitRepo, gitCommits, gitGetCommits, gitStaged, gitRemoteHead} from './helpers/git-utils';
+import {gitRepo, gitCommits, gitGetCommits, gitStaged, gitRemoteHead} from './helpers/_git-utils';
 
 // Save the current working diretory
 const cwd = process.cwd();

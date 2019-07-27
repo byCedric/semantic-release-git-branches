@@ -11,7 +11,7 @@ import {
 	gitCommitedFiles,
 	gitGetCommits,
 	gitTagVersion,
-} from './helpers/git-utils';
+} from './helpers/_git-utils';
 
 // Save the current process.env
 const envBackup = {...process.env};
