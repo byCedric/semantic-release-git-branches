@@ -63,23 +63,6 @@
 			"path": "@peakfijn/config-commitizen"
 		}
 	},
-	"commitlint": {
-		"extends": [
-			"@peakfijn/config-commitlint"
-		],
-		"rules": {
-			"scope-empty": [
-				0
-			],
-			"scope-enum": [
-				2,
-				"always",
-				[
-					"package"
-				]
-			]
-		}
-	},
 	"greenkeeper": {
 		"commitMessages": {
 			"initialBadge": "documentation: add greenkeeper badge",
