@@ -1,3 +1,11 @@
+## [1.2.3](https://github.com/bycedric/semantic-release-git-branches/compare/1.2.2...1.2.3) (2019-07-27)
+
+
+### Code refactors
+
+* update dependencies and node lts for releases ([#65](https://github.com/bycedric/semantic-release-git-branches/issues/65)) ([1a3468a](https://github.com/bycedric/semantic-release-git-branches/commit/1a3468a))
+* upgrade fs-extra to version 8.0.0 ([#52](https://github.com/bycedric/semantic-release-git-branches/issues/52)) ([cd88932](https://github.com/bycedric/semantic-release-git-branches/commit/cd88932))
+
 ## [1.2.2](https://github.com/bycedric/semantic-release-git-branches/compare/1.2.1...1.2.2) (2019-04-25)
 
 
