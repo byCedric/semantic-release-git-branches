@@ -134,9 +134,7 @@ export async function gitStaged() {
 export async function gitCommitedFiles(ref = 'HEAD') {
 	const {stdout} = await execa('git', ['diff-tree', '-r', '--name-only', '--no-commit-id', '-r', ref]);
 
-	return stdout
-		.split('\n')
-		.filter(file => Boolean(file));
+	return stdout.split('\n').filter(file => Boolean(file));
 }
 
 /**
