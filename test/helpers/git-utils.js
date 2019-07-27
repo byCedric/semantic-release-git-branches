@@ -61,7 +61,7 @@ export async function gitCommits(messages) {
 	await pReduce(
 		messages,
 		async (commits, msg) => {
-			const stdout = await execa.stdout('git', ['commit', '-m', msg, '--allow-empty', '--no-gpg-sign']);
+			const { stdout } = await execa('git', ['commit', '-m', msg, '--allow-empty', '--no-gpg-sign']);
 			const [, hash] = /^\[(?:\w+)\(?.*?\)?(\w+)\] .+(?:\n|$)/.exec(stdout);
 			commits.push(hash);
 			return commits;
@@ -91,7 +91,9 @@ export async function gitCheckout(branch, create = true) {
  */
 export async function gitTagVersion(tagName, sha) {
 	await execa('git', sha ? ['tag', '-f', tagName, sha] : ['tag', tagName]);
-	return execa.stdout('git', ['rev-list', '-1', '--tags', tagName]);
+	const { stdout } = await execa('git', ['rev-list', '-1', '--tags', tagName]);
+
+	return stdout;
 }
 
 /**
@@ -115,7 +117,9 @@ export async function gitShallowClone(origin, branch = 'master', depth = 1) {
  * @return {Array<String>} Array of staged files path.
  */
 export async function gitStaged() {
-	return (await execa.stdout('git', ['status', '--porcelain']))
+	const { stdout } = await execa('git', ['status', '--porcelain']);
+
+	return stdout
 		.split('\n')
 		.filter(status => status.startsWith('A '))
 		.map(status => status.match(/^A\s+(.+)$/)[1]);
@@ -128,7 +132,9 @@ export async function gitStaged() {
  * @return {Array<String>} The list of files path included in the commit.
  */
 export async function gitCommitedFiles(ref = 'HEAD') {
-	return (await execa.stdout('git', ['diff-tree', '-r', '--name-only', '--no-commit-id', '-r', ref]))
+	const { stdout } = await execa('git', ['diff-tree', '-r', '--name-only', '--no-commit-id', '-r', ref]);
+
+	return stdout
 		.split('\n')
 		.filter(file => Boolean(file));
 }
@@ -173,7 +179,9 @@ export async function gitDetachedHead(origin, head) {
  * @return {String} The sha of the commit associated with `tagName` on the remote repository.
  */
 export async function gitRemoteHead(origin) {
-	return (await execa.stdout('git', ['ls-remote', origin, 'HEAD']))
+	const { stdout } = await execa('git', ['ls-remote', origin, 'HEAD']);
+
+	return stdout
 		.split('\n')
 		.filter(tag => Boolean(tag))
 		.map(tag => tag.match(/^(\S+)/)[1])[0];
