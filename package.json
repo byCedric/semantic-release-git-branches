@@ -40,7 +40,7 @@
 		"p-reduce": "^2.1.0"
 	},
 	"devDependencies": {
-		"@commitlint/travis-cli": "^8.1.0",
+		"@commitlint/travis-cli": "^8.3.4",
 		"@peakfijn/config-commitizen": "^2.1.0",
 		"@peakfijn/config-commitlint": "^2.1.0",
 		"@peakfijn/config-release": "^2.1.0",
