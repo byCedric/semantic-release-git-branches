@@ -44,7 +44,7 @@
 		"@peakfijn/config-commitizen": "^2.1.0",
 		"@peakfijn/config-commitlint": "^2.1.0",
 		"@peakfijn/config-release": "^2.1.0",
-		"ava": "^2.2.0",
+		"ava": "^3.7.1",
 		"clear-module": "^4.0.0",
 		"codecov": "^3.5.0",
 		"file-url": "^3.0.0",
